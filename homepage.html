@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Yavin"s Homepage</title>
+        <style>
+            .block {
+                padding: 0.2rem;
+            }
+            @media (max-width:600px) {
+                .page {
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-template-rows:3rem 2.5rem 1fr 10rem 3rem;
+                grid-template-areas:
+                    "hd"
+                    "br"
+                    "ct"
+                    "sb"
+                    "ft";
+                font-size:0.75rem;
+                }
+                .header {
+                grid-area:hd;
+                display:flex;
+                justify-content:center;
+                font-size:1.5rem;
+                border-bottom:solid #444;
+                }
+                .nav_bar {
+                    grid-area:br;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-bottom:solid #444;
+                }
+                .content {
+                    grid-area:ct;
+                    padding:2rem;
+                }
+                .side_bar {
+                    grid-area:sb;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:start;
+                    padding:1rem;
+                    background-color: #444;
+                    color: #fff;
+                }
+                .side_block{
+                    padding:0.25rem;
+                }
+                .footer {
+                    grid-area:ft;
+                    display: flex;
+                    justify-content: center;
+                    border-top:solid #444;
+                }
+                .wrapper {
+                    display:grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-gap:1rem;
+                    color:#444;
+                }
+                .card {
+                    border-radius:0.5rem;
+                    box-shadow:0 0.25rem 0.5rem 0 rgba(0,0,0,0.3);
+                    transition:0.3s;
+                    background-color: beige;
+                }
+                .card:hover {
+                    box-shadow:0 0.5rem 1rem 0 rgba(0,0,0,0.3);
+                }
+                .card_img {
+                    width:100%;
+                }
+                .container {
+                    padding:0.25rem 0.5rem;
+                }
+                .nav_link {
+                    padding:0.5rem 1rem;
+                    border-left: solid #444;
+                }
+            }
+            @media (min-width:601px) and (max-width:900px) {
+                .page {
+                display:grid;
+                grid-template-columns:1fr 15rem;
+                grid-template-rows:3.5rem 3rem 1fr 5rem;
+                grid-template-areas:
+                    "hd hd"
+                    "br br"
+                    "ct sb"
+                    "ft ft";
+                font-size:0.85rem;
+                }
+                .header {
+                grid-area:hd;
+                display:flex;
+                justify-content:center;
+                font-size:2rem;
+                border-bottom:solid #444;
+                }
+                .nav_bar {
+                    grid-area:br;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-bottom:solid #444;
+                }
+                .content {
+                    grid-area:ct;
+                    padding:2rem;
+                }
+                .side_bar {
+                    grid-area:sb;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:start;
+                    padding:1rem;
+                    background-color: #444;
+                    color: #fff;
+                }
+                .side_block{
+                    padding:0.25rem;
+                    font-size:1.25rem;
+                }
+                .footer {
+                    grid-area:ft;
+                    display: flex;
+                    justify-content: center;
+                    border-top:solid #444;
+                }
+                .wrapper {
+                    display:grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-gap:1rem;
+                    color:#444;
+                }
+                .card {
+                    border-radius:0.5rem;
+                    box-shadow:0 0.25rem 0.5rem 0 rgba(0,0,0,0.3);
+                    transition:0.3s;
+                    background-color: beige;
+                }
+                .card:hover {
+                    box-shadow:0 0.5rem 1rem 0 rgba(0,0,0,0.3);
+                }
+                .card_img {
+                    width:100%;
+                }
+                .container {
+                    padding:0.5rem 0.5rem;
+                }
+                .nav_link {
+                    padding:0.5rem 0.5rem;
+                    border-left: solid #444;
+                }
+            }
+            @media (min-width: 901px) {
+                .page {
+                display:grid;
+                grid-template-columns:1fr 20rem;
+                grid-template-rows:5rem 3rem 1fr 5rem;
+                grid-template-areas:
+                    "hd hd"
+                    "br br"
+                    "ct sb"
+                    "ft ft";
+                }
+                .header {
+                grid-area:hd;
+                display:flex;
+                justify-content:center;
+                font-size:3rem;
+                border-bottom:solid #444;
+                }
+                .nav_bar {
+                    grid-area:br;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1rem;
+                    border-bottom:solid #444;
+                }
+                .content {
+                    grid-area:ct;
+                    padding:2rem;
+                }
+                .side_bar {
+                    grid-area:sb;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:start;
+                    padding:1rem;
+                    background-color: #444;
+                    color: #fff;
+                }
+                .side_block{
+                    padding:0.25rem;
+                    font-size:1.25rem;
+                }
+                .footer {
+                    grid-area:ft;
+                    display: flex;
+                    justify-content: center;
+                    border-top:solid #444;
+                }
+                .wrapper {
+                    display:grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-gap:2rem;
+                    color:#444;
+                }
+                .card {
+                    border-radius:0.5rem;
+                    box-shadow:0 0.25rem 0.5rem 0 rgba(0,0,0,0.3);
+                    transition:0.3s;
+                    background-color: beige;
+                }
+                .card:hover {
+                    box-shadow:0 0.5rem 1rem 0 rgba(0,0,0,0.3);
+                }
+                .card_img {
+                    width:100%;
+                }
+                .container {
+                    padding:1rem 1rem;
+                }
+                .nav_link {
+                    padding:0.5rem 1rem;
+                    border-left: solid #444;
+                }
+            }
+            
+
+        </style>
+    </head>
+    <body class="page">
+        <header class="header block">
+            <em>Welcome to Yavin's Homepage!</em>
+        </header>
+        <nav class="nav_bar block">
+            <a href=".\homepage.html" rel="head" target="_blank" class="nav_link">Home</a>
+            <a href=".\blog_post.html" rel="chapter" target="_blank" class="nav_link">Blog</a>
+        </nav>
+        <section class="content block">
+            <div class="wrapper">
+                <div class="card">
+                    <img src="./resources/card (1).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #1</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./resources/card (2).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #2</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./resources/card (3).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #3</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./resources/card (4).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #4</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./resources/card (5).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #5</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./resources/card (6).jpg" alt="card_1" class="card_img">
+                    <div class="container">
+                        <h4>Old places</h4>
+                        <p>Place #6</p>
+                        <a href="./blog_post.html" rel="chapter" target="_blank">Continue reading ...</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="side_bar block">
+            <h1>Recent Posts</h1>
+            <div class="side_block">Travel to HK</div>
+            <div class="side_block">Travel to the sea</div>
+        </aside>
+        <footer class="footer block">
+            <h1>~ Approaching footer ~</h1>
+        </footer>
+    </body>
+</html>
