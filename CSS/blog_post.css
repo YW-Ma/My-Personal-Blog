@@ -74,3 +74,9 @@
     color: cadetblue;
     font-size: 1.1rem;
 }
+
+.highlight {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
